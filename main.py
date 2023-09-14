@@ -26,6 +26,9 @@ def jeu_de_devinette():
 		essai = int(input("Entrez un chiffre de 0 à 1000 :"))
 		vérifie=input("Voulez vous vérifier l'essai (oui|non)\n")
 		nombreEssais += 1
+		if vérifie==("non"):
+			print("bye bye")
+			exit
 		if vérifie==("oui"):
 			if essai != inconnu :
 			#le text qui apparait quand la réponse est mauvaise
@@ -37,6 +40,7 @@ def jeu_de_devinette():
 			else:
 				score += 1
 				#le text qui apparait quand la réponse est bonne
+				print("Vous avez réussi en %d essai  "%nombreEssais)
 				print("\n\nBravo! Votre score est : %d"%score)
 				choice=input("\n Voulez vous recomencer: \n oui|non\n")
 				#if score>=highscore():
